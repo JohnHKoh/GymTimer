@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 
 app.use(express.static(__dirname + '/public'));
 
-let state = 0;
+let state = -1;
 const RESET_STATE = -1;
 const CLOCK_STATE = 0;
 const STOPWATCH_STARTED_STATE = 1;
