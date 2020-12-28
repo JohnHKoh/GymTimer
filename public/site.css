@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#time {
+    margin-top: 500px;
+    font-size: 180px;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 800px) {
+    #time {
+        margin-top: 50px;
+        font-size: 19vw;
+    }
+    .buttonGroup {
+        margin-top: 50px !important;
+    }
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+    width: 90vw;
+    font-size: 10vw;
+}
+
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+
+.buttonGroup {
+    margin-top: 500px;
+}
