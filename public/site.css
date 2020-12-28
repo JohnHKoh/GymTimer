@@ -15,6 +15,7 @@ body {
     #time {
         margin-top: 50px;
         font-size: 19vw;
+        letter-spacing: 0px !important;
     }
     .buttonGroup {
         margin-top: 50px !important;
