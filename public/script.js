@@ -4,11 +4,10 @@ const CLOCK_STATE = 0;
 const STOPWATCH_STARTED_STATE = 1;
 const STOPWATCH_STOPPED_STATE = 2;
 
-let state = 0;
 let clock;
 socket.emit('clockClicked');
 
-function pad(n) { return ("0" + n).slice(-2); }
+function pad(n) { return n === 0 ? "12" : ("0" + n).slice(-2); }
 
 function updateTime() {
     var date = new Date();
@@ -68,9 +67,7 @@ document.getElementById("clock").onclick = function () {
 };
 
 socket.on('setClock', (state) => {
-    if (state === CLOCK_STATE) {
-        return;
-    }
+    clearInterval(clock);
     stop();
     updateTime();
     clock = setInterval(updateTime, 1000);
