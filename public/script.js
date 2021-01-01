@@ -15,7 +15,7 @@ function updateTime() {
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
     // document.getElementById("time").innerHTML = pad(hours%12) + ":" + pad(minutes) + ":" + pad(seconds) + " " + ((hours >= 12) ? "PM" : "AM");
-    document.getElementById("time").innerHTML = (hours === 0? "12" : pad(hours%12)) + ":" + pad(minutes) + ":" + pad(seconds);
+    document.getElementById("time").innerHTML = (hours%12 === 0? "12" : pad(hours%12)) + ":" + pad(minutes) + ":" + pad(seconds);
 }
 
 var timeBegan = null
