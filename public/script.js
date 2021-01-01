@@ -7,7 +7,7 @@ const STOPWATCH_STOPPED_STATE = 2;
 let clock;
 socket.emit('clockClicked');
 
-function pad(n) { return n === 0 ? "12" : ("0" + n).slice(-2); }
+function pad(n) { return ("0" + n).slice(-2); }
 
 function updateTime() {
     var date = new Date();
@@ -15,7 +15,7 @@ function updateTime() {
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
     // document.getElementById("time").innerHTML = pad(hours%12) + ":" + pad(minutes) + ":" + pad(seconds) + " " + ((hours >= 12) ? "PM" : "AM");
-    document.getElementById("time").innerHTML = pad(hours%12) + ":" + pad(minutes) + ":" + pad(seconds);
+    document.getElementById("time").innerHTML = (hours === 0? "12" : pad(hours%12)) + ":" + pad(minutes) + ":" + pad(seconds);
 }
 
 var timeBegan = null
